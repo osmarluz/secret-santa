@@ -8,6 +8,10 @@ class Campaign < ApplicationRecord
   has_many :members, dependent: :destroy
   validates :title, :description, :user, :status, presence: true
 
+  def count_opened
+    self.members.where(open: true).count
+  end
+
   def set_status
     self.status = :pending
   end
