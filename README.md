@@ -12,11 +12,11 @@
 
 ### 2. Create the database on the container
 
-`docker-compose run website bundle exec rails db:create`
+`docker-compose run --rm app bundle exec rails db:create`
 
 ### 3. Run the database migrations on the container
 
-`docker-compose run website bundle exec rails db:migrate`
+`docker-compose run --rm app bundle exec rails db:migrate`
 
 ### 4. Start the containers
 
